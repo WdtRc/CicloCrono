@@ -19,7 +19,8 @@ const ensureAudioContextStarted = async () => {
 
 export const playStartSound = async () => {
   await ensureAudioContextStarted();
-  synth?.triggerAttackRelease("C5", "8n", Tone.now());
+  // Changed from C5 to E5 for a higher pitch
+  synth?.triggerAttackRelease("E5", "8n", Tone.now());
 };
 
 export const playHalfwaySound = async () => {
@@ -29,10 +30,15 @@ export const playHalfwaySound = async () => {
 
 export const playEndSound = async () => {
   await ensureAudioContextStarted();
-  synth?.triggerAttackRelease("G5", "8n", Tone.now());
+  // Changed from G5 to C4 for a lower pitch and repeat 3 times
+  const now = Tone.now();
+  synth?.triggerAttackRelease("C4", "8n", now);
+  synth?.triggerAttackRelease("C4", "8n", now + 0.3);
+  synth?.triggerAttackRelease("C4", "8n", now + 0.6);
 };
 
 export const playCountdownTickSound = async () => {
   await ensureAudioContextStarted();
   synth?.triggerAttackRelease("A4", "16n", Tone.now());
 };
+
