@@ -19,8 +19,8 @@ const ensureAudioContextStarted = async () => {
 
 export const playStartSound = async () => {
   await ensureAudioContextStarted();
-  // Changed from C5 to E5 for a higher pitch
-  synth?.triggerAttackRelease("E5", "8n", Tone.now());
+  // Changed from C5 to E5 for a higher pitch, and duration to "4n"
+  synth?.triggerAttackRelease("E5", "4n", Tone.now());
 };
 
 export const playHalfwaySound = async () => {
