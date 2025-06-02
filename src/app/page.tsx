@@ -94,7 +94,7 @@ export default function CycleTempoPage() {
             Cycle Tempo
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-8 overflow-y-auto flex-1">
+        <CardContent className="space-y-4 overflow-y-auto flex-1">
           <ParameterForm
             defaultValues={defaultValues}
             onSubmit={handleFormSubmit}

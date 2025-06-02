@@ -15,7 +15,7 @@ interface ControlButtonsProps {
 
 export function ControlButtons({ status, onStart, onPause, onResume, onStop }: ControlButtonsProps) {
   return (
-    <div className="flex justify-center space-x-4 mt-8">
+    <div className="flex justify-center space-x-4 mt-4">
       {status === 'IDLE' || status === 'FINISHED' ? (
         <Button onClick={onStart} size="lg" className="w-32 bg-primary hover:bg-primary/90 text-primary-foreground">
           <Play className="mr-2 h-5 w-5" /> Start

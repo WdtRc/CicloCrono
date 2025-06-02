@@ -52,11 +52,11 @@ export function TimerDisplay({ timerState }: TimerDisplayProps) {
     : (status === 'FINISHED' ? 100 : 0);
 
   return (
-    <div className="text-center space-y-4">
-      <div className="font-headline text-7xl md:text-8xl text-primary tabular-nums">
+    <div className="text-center space-y-2">
+      <div className="font-headline text-5xl md:text-6xl text-primary tabular-nums">
         {formatTime(timeLeft)}
       </div>
-      <div className="text-2xl font-semibold text-accent-foreground uppercase tracking-wider">
+      <div className="text-lg font-semibold text-accent-foreground uppercase tracking-wider">
         {phaseText}
       </div>
       {status !== 'IDLE' && status !== 'COUNTDOWN' && status !== 'FINISHED' && (
