@@ -88,13 +88,13 @@ export default function CycleTempoPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-background">
-      <Card className="w-full max-w-md shadow-2xl">
+      <Card className="w-full max-w-md shadow-2xl h-[80vh] flex flex-col">
         <CardHeader>
           <CardTitle className="text-3xl font-headline text-center text-primary">
             Cycle Tempo
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-8">
+        <CardContent className="space-y-8 overflow-y-auto flex-1">
           <ParameterForm
             defaultValues={defaultValues}
             onSubmit={handleFormSubmit}
